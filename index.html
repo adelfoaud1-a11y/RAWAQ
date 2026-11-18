@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505"><title>رواق | كتالوج الأسرّة</title>
+<style>
+:root{color-scheme:dark;--bg:#050505;--panel:#111;--panel2:#1c1c1e;--line:#303034;--ink:#f8f6f3;--muted:#a5a2a0;--soft:#232325;--accent:#e7d8c4;--focus:#d9c4a5}
+*{box-sizing:border-box}[hidden]{display:none!important}html{background:var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer;color:inherit}
+.topbar{position:sticky;top:0;z-index:5;background:#050505ed;backdrop-filter:blur(14px);padding:calc(10px + env(safe-area-inset-top)) 16px 11px;border-bottom:1px solid #ffffff12}
+.top-inner{width:min(100%,1040px);margin:auto;display:flex;align-items:center;gap:13px}.brand{min-width:76px;display:flex;align-items:center;gap:9px}.logo{width:36px;height:36px;border-radius:12px;background:#eee4d7;color:#1b1713;display:grid;place-items:center;font-size:20px;font-weight:900}.brand b{font-size:17px;letter-spacing:.2px}.search-wrap{position:relative;flex:1}.search{display:flex;align-items:center;gap:10px;background:var(--panel2);border:1px solid #ffffff0b;border-radius:15px;padding:0 14px;height:48px}.search svg{width:20px;height:20px;color:#b9b5b1;flex:none}.search input{width:100%;min-width:0;background:transparent;border:0;outline:0;color:var(--ink);font-size:14px}.search input::placeholder{color:#aaa7a4}.clear-search{display:none;border:0;background:transparent;color:#aaa;padding:5px}.search-results{position:absolute;top:56px;right:0;left:0;max-height:55vh;overflow:auto;background:#171719;border:1px solid var(--line);border-radius:15px;padding:7px;box-shadow:0 18px 55px #000b;display:none}.search-results.open{display:block}.search-result{display:flex;align-items:center;gap:11px;width:100%;text-align:right;padding:8px;border:0;border-radius:11px;background:transparent}.search-result:hover,.search-result:focus{background:#2b2b2e;outline:0}.search-result img{width:46px;height:54px;object-fit:cover;border-radius:8px;background:#222}.search-result b{display:block;font-size:13px}.search-result small{display:block;color:var(--muted);margin-top:4px;font-size:11px}.empty-result{padding:16px;color:var(--muted);font-size:13px}
+main{width:min(100%,1040px);margin:0 auto;padding:22px 16px 48px}.catalog-title{display:flex;align-items:center;justify-content:space-between;margin:0 2px 14px}.catalog-title h1{font-size:16px;font-weight:650;margin:0;color:#e9e6e2}.catalog-title button{border:1px solid var(--line);background:#111;border-radius:999px;padding:8px 12px;font-size:12px;color:#d4d0cb}.model-strip{display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-bottom:15px}.model-strip.open{display:grid}.model-card{background:#111;border:1px solid var(--line);border-radius:13px;padding:7px;text-align:right;min-width:0}.model-card.active{border-color:#bc9d77}.model-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px;background:#222}.model-card b{display:block;font-size:11px;margin:7px 2px 2px}.model-card small{display:block;color:var(--muted);font-size:10px;margin:0 2px 2px}
+.product{border:1px solid #2b2b2d;border-radius:25px;padding:12px;background:#080808;overflow:hidden}.product-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:23px;align-items:start}.media{min-width:0}.hero{position:relative;overflow:hidden;border-radius:20px;background:#171719;aspect-ratio:4/5;display:grid;place-items:center;scroll-margin-top:78px}.hero img{width:100%;height:100%;display:block;object-fit:cover}.hero.has-photo{cursor:zoom-in}.photo-tag{position:absolute;left:12px;bottom:12px;background:#252527ed;border:1px solid #ffffff24;color:#fff;border-radius:999px;padding:5px 10px;font-size:12px;line-height:1.15}.photo-status{padding:24px;color:#c1bbb4;text-align:center;font-size:14px;line-height:1.9}.photo-status small{display:block;color:#8e8984;font-size:11px;margin-top:5px}.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.thumb{height:51px;border-radius:14px;border:1px solid transparent;background:var(--panel2);color:#d5d1ce;font-size:13px}.thumb.active{background:#29292b;border-color:#57575b;color:#fff}.thumb.waiting{color:#a5a0a0}.photo-caption{min-height:21px;color:#938e88;font-size:11px;text-align:center;padding:8px 2px 0}
+.details{padding:17px 10px 10px;min-width:0}.product-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.product-title{font-size:23px;line-height:1.4;margin:0;font-weight:750}.color-chip{flex:none;background:#252527;border:1px solid #363638;border-radius:999px;padding:5px 9px;color:#dfdbd7;font-size:11px;white-space:nowrap}.meta{margin:9px 0 0;color:#aaa6a1;font-size:13px;line-height:1.8}.meta b{font-weight:500;color:#dedad6}.meta-line{display:flex;flex-wrap:wrap;gap:7px 14px}.description{margin:14px 0 0;color:#c2bdb8;line-height:1.85;font-size:13px}.specs{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.spec{border:1px solid #343436;background:#18181a;border-radius:999px;padding:5px 9px;font-size:11px;color:#c7c1ba}.color-header{display:flex;justify-content:space-between;align-items:center;margin-top:21px}.color-header h2{font-size:14px;margin:0;font-weight:650}.color-actions{display:flex;align-items:center;gap:7px}.nav-color{width:40px;height:38px;border:1px solid #37373a;background:#101012;border-radius:20px;font-size:20px;line-height:1}.nav-color:hover{background:#28282b}.swatch-row{display:flex;direction:rtl;justify-content:center;align-items:center;gap:12px;min-height:63px;margin:6px auto 0}.swatch{width:38px;height:38px;flex:0 0 38px;border-radius:50%;border:2px solid #262629;background:var(--swatch);box-shadow:inset 0 1px 3px #ffffff59,0 1px 5px #0008;position:relative;padding:0}.swatch.active{border:2px solid #fff;outline:2px solid #ffffff55;outline-offset:1px}.swatch:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.color-current{text-align:center;color:#aaa5a0;font-size:12px;min-height:19px}.angle-title{margin:20px 0 0;color:#aaa5a0;font-size:12px}.status-note{margin-top:16px;padding:11px 12px;background:#151515;border:1px solid #2a2a2c;border-radius:13px;color:#aaa6a0;font-size:11px;line-height:1.8}.product-actions{display:flex;gap:9px;margin-top:12px}.secondary-btn{border:1px solid #37373a;background:#151517;border-radius:11px;padding:9px 11px;font-size:11px;color:#ddd8d3}.secondary-btn:hover{background:#252527}.not-ready{min-height:260px;display:grid;place-items:center;text-align:center;padding:28px;color:#b9b3ae;line-height:2}.not-ready b{font-size:16px;color:#f2ece5}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.modal{position:fixed;inset:0;z-index:20;background:#000e;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal img{max-width:min(96vw,900px);max-height:92vh;object-fit:contain}.modal-close{position:absolute;top:calc(15px + env(safe-area-inset-top));left:15px;width:44px;height:44px;border-radius:50%;border:1px solid #ffffff40;background:#202022;color:white;font-size:24px}.foot{margin:15px 4px 0;color:#77726d;font-size:10px;line-height:1.8;text-align:center}
+@media(max-width:700px){.topbar{padding-left:13px;padding-right:13px}.top-inner{gap:9px}.brand{min-width:65px;gap:7px}.logo{width:32px;height:32px;border-radius:11px;font-size:18px}.brand b{font-size:15px}.search{height:44px;padding:0 11px}.search input{font-size:13px}main{padding:13px 12px 34px}.catalog-title{margin:0 4px 10px}.catalog-title h1{font-size:13px}.product{padding:0;border-radius:22px}.product-grid{display:flex;flex-direction:column;gap:0}.media{width:100%}.hero{border-radius:18px;aspect-ratio:4/5}.details{width:100%;padding:14px 14px 15px}.product-title{font-size:21px}.color-header{margin-top:17px}.swatch-row{gap:10px;min-height:57px}.swatch{width:35px;height:35px;flex-basis:35px}.nav-color{width:40px;height:38px}.thumb{height:48px}.description{font-size:12px}.specs{margin-top:10px}}
+@media(max-width:380px){.swatch-row{gap:7px}.swatch{width:32px;height:32px;flex-basis:32px}.nav-color{width:35px;height:35px}.product-title{font-size:19px}.search input{font-size:12px}}
+@media(min-width:1100px){main{padding-top:30px}.product{padding:18px}.details{padding:20px 12px}.hero{max-height:720px}}
+</style>
+<style>
+.marketing-copy{margin-top:19px;padding:14px 13px;background:#121212;border:1px solid #29292b;border-radius:15px}
+.marketing-heading{margin:0 0 7px;color:#e9dfd3;font-size:13px;font-weight:700}
+.description{margin:0;color:#c2bdb8;line-height:1.85;font-size:13px}
+.color-copy{margin-top:11px;padding-top:10px;border-top:1px solid #2d2d30}
+.color-copy h4{margin:0 0 4px;color:#d8c4a8;font-size:12px;font-weight:650}
+.color-copy p{margin:0;color:#aaa6a1;line-height:1.8;font-size:12px}
+.marketing-pilot{margin:12px 2px 0;padding:2px 4px 8px}
+.pilot-name{margin:0 0 5px;color:#f6f2ed;font-size:20px;line-height:1.45;font-weight:750}
+.pilot-summary{margin:0;color:#c2bdb8;font-size:13px;line-height:1.8;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.description-toggle{margin-top:7px;padding:4px 0;border:0;background:transparent;color:#dfc4a2;font-weight:650;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+.description-expanded{max-height:0;opacity:0;overflow:hidden;transition:max-height .34s ease,opacity .24s ease}
+.description-expanded.open{max-height:28rem;opacity:1}
+.expanded-text{margin:3px 0 0;color:#c2bdb8;font-size:13px;line-height:1.9}
+.expanded-color{margin-top:9px;padding-top:8px;border-top:1px solid #2d2d30}
+.expanded-color h3{margin:0 0 3px;color:#d8c4a8;font-size:12px;font-weight:650}
+.expanded-color p{margin:0;color:#aaa6a1;font-size:12px;line-height:1.8}
+@media(max-width:700px){.marketing-copy{margin-top:15px;padding:12px}.description{font-size:12px}}
+@media(max-width:700px){.marketing-pilot{margin:11px 10px 2px}.pilot-name{font-size:19px}.pilot-summary,.expanded-text{font-size:12px}.description-toggle{min-height:34px}}
+@media(prefers-reduced-motion:reduce){.description-expanded{transition:none}}
+</style>
+<style id="viewport-fit">
+.hero{height:min(52dvh,620px);min-height:180px;aspect-ratio:auto}
+.hero img{object-fit:contain;min-height:0;max-height:100%}
+@media(min-width:600px){
+.product-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.media,.details{width:auto;min-width:0}
+.details{padding:8px}.hero{height:min(56dvh,620px)}
+main{padding-top:12px}.product{padding:10px}
+}
+</style></head>
+<body>
+<header class="topbar"><div class="top-inner">
+  <a href="settings.html" style="color:inherit;white-space:nowrap">الإعدادات</a><div class="brand" aria-label="رواق"><span class="logo">ر</span><b>رواق</b></div>
+  <div class="search-wrap"><label class="search" for="catalogSearch">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <input id="catalogSearch" type="search" autocomplete="off" placeholder="ابحث بالاسم أو الكود أو اللون..." aria-label="ابحث باسم السرير أو الكود أو اللون أو المقاس أو نوع القماش">
+    <button class="clear-search" id="clearSearch" aria-label="مسح البحث">×</button>
+  </label><div class="search-results" id="searchResults" role="listbox" aria-label="نتائج البحث"></div></div>
+</div></header>
+<main>
+  <div class="catalog-title"><h1>كتالوج الأسرّة</h1><button id="toggleModels" aria-expanded="false">تصفّح التصاميم <span id="modelCount">3</span></button></div>
+  <section class="model-strip" id="modelStrip" aria-label="التصاميم المتاحة"></section>
+  <article class="product" id="productCard">
+    <div class="product-grid">
+      <section class="media" aria-label="صور المنتج">
+        <div class="hero" id="hero" role="button" tabindex="0" aria-label="تكبير صورة المنتج">
+          <img id="heroImage" alt="" loading="eager" hidden>
+          <div class="photo-status" id="photoStatus" role="status" hidden></div>
+          <span class="photo-tag" id="photoTag" hidden></span>
+        </div>
+        <section class="marketing-pilot" id="marketingPilot" hidden aria-label="وصف موديل الوردة">
+          <h2 class="pilot-name" id="pilotName"></h2>
+          <p class="pilot-summary" id="pilotSummary"></p>
+          <button class="description-toggle" id="descriptionToggle" type="button" aria-expanded="false" aria-controls="descriptionExpanded">عرض المزيد</button>
+          <div class="description-expanded" id="descriptionExpanded" aria-hidden="true" inert>
+            <p class="expanded-text" id="expandedDescription"></p>
+            <div class="expanded-color">
+              <h3 id="expandedColorTitle"></h3>
+              <p id="expandedColorDescription"></p>
+            </div>
+          </div>
+        </section>
+        <div class="thumbs" id="angleTabs" role="tablist" aria-label="زوايا التصوير">
+          <button class="thumb active" data-view="front" role="tab" aria-selected="true">الصورة الرئيسية</button>
+          <button class="thumb" data-view="side" role="tab" aria-selected="false">الزاوية الجانبية</button>
+        </div>
+        <div class="photo-caption" id="photoCaption"></div>
+      </section>
+      <section class="details" aria-live="polite">
+        <div class="product-title-row" id="productTitleRow"><h2 class="product-title" id="productName"></h2><span class="color-chip" id="colorChip"></span></div>
+        <div class="meta" id="productMeta"></div>
+        <div class="specs" id="specs"></div>
+        <div id="colorControls">
+          <div class="color-header"><h3>ألوان المخمل · Cat 666</h3><div class="color-actions">
+            <button class="nav-color" id="previousColor" aria-label="اللون السابق">‹</button>
+            <button class="nav-color" id="nextColor" aria-label="اللون التالي">›</button>
+          </div></div>
+          <div class="swatch-row" id="swatches" aria-label="اختيار لون القماش"></div>
+          <div class="color-current" id="colorCurrent"></div>
+        </div>
+        <section class="marketing-copy" id="marketingCopy" aria-live="polite" aria-label="الوصف التسويقي">
+          <h3 class="marketing-heading">عن التصميم</h3>
+          <p class="description" id="productDescription"></p>
+          <div class="color-copy" id="colorCopy" hidden>
+            <h4 id="colorDescriptionTitle"></h4>
+            <p id="colorDescription"></p>
+          </div>
+        </section>
+        <div class="status-note" id="statusNote"></div>
+        <div class="product-actions"><button class="secondary-btn" id="exportCsv">تنزيل بيانات الألوان CSV</button></div>
+      </section>
+    </div>
+  </article>
+  <p class="foot">الأكواد التسلسلية محفوظة في سجل بيانات المشروع. درجات الألوان المعروضة للمراجعة الرقمية وتحتاج مطابقة مع عينات المورد قبل اعتمادها للبيع.</p>
+</main>
+<div class="modal" id="imageModal" aria-label="عرض الصورة بالحجم الكامل"><button class="modal-close" id="closeModal" aria-label="إغلاق">×</button><img id="modalImage" alt="تكبير صورة المنتج"></div>
+<script src="assets/catalog/catalog-products.js?v=20261110-side40"></script>
+<script src="assets/catalog/local-recolor-images.js"></script>
+<script src="assets/catalog/apply-local-images.js"></script>
+<script>
+const catalog=window.RAWAQ_CATALOG;
+const models=catalog.models;
+let activeModel=models[0],activeColor=0,activeView='front',query='';
+let photoRequest=0;
+const expandedDescriptions=new Set();
+const $=id=>document.getElementById(id);
+const normalize=s=>String(s||'').toLocaleLowerCase('ar').normalize('NFD').replace(/[\u064B-\u065F\u0670]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/[×xX]/g,'x').replace(/\s+/g,' ').trim();
+const formatColor=n=>String(n).padStart(2,'0');
+function currentVariant(){return activeModel.variants[activeColor]||null}
+function revealProductImage(){const hero=$('hero');const r=hero.getBoundingClientRect();const topbar=document.querySelector('.topbar').getBoundingClientRect().bottom;if(r.bottom<=topbar||r.top<topbar||r.top>=window.innerHeight){const target=Math.max(0,window.scrollY+r.top-topbar-8);window.scrollTo({top:target,behavior:'smooth'})}}
+function setActiveModel(id,colorIndex=null){
+ const model=models.find(m=>m.id===id)||models[0];
+ if(model!==activeModel)activeView='front';
+ activeModel=model;
+ activeColor=colorIndex===null?Math.min(activeColor,Math.max(model.variants.length-1,0)):colorIndex;
+ render();
+ revealProductImage();
+}
+function variantForQuery(model,q){if(/^\d{1,2}$/.test(q)){const n=Number(q);return model.variants.find(v=>v.colorNumber===n)||null}if(/^\d{11}$/.test(q))return model.variants.find(v=>v.sku===q)||null;return model.variants.find(v=>normalize(v.colorName).includes(q))||null}
+function searchMatches(model,q){if(!q)return true;const base=normalize([model.name,model.designName,model.code,model.id,model.size,model.fabricType,model.fabricCatalog,model.boxType].join(' '));if(base.includes(q))return true;return model.variants.some(v=>normalize([v.sku,v.colorNumber,v.colorName,v.size,v.fabricType,v.fabricCatalog].join(' ')).includes(q))}
+function drawModelCards(list=models){$('modelStrip').innerHTML=list.map(m=>`<button class="model-card ${m.id===activeModel.id?'active':''}" data-model="${m.id}"><img src="${m.mainImage}" alt="${m.name}" loading="lazy"><b>${m.name}</b><small>${m.code||m.id}</small></button>`).join('');document.querySelectorAll('.model-card').forEach(btn=>btn.addEventListener('click',()=>{setActiveModel(btn.dataset.model);$('modelStrip').classList.remove('open');$('toggleModels').setAttribute('aria-expanded','false')}))}
+function syncPilotDescription(){const open=expandedDescriptions.has(activeModel.id);const panel=$('descriptionExpanded');panel.classList.toggle('open',open);panel.setAttribute('aria-hidden',String(!open));panel.toggleAttribute('inert',!open);$('descriptionToggle').setAttribute('aria-expanded',String(open));$('descriptionToggle').textContent=open?'عرض أقل':'عرض المزيد'}
+function windowedColors(){const all=activeModel.variants;if(all.length<=5)return all.map((v,i)=>({v,i}));const start=Math.max(0,Math.min(activeColor-2,all.length-5));return all.slice(start,start+5).map((v,j)=>({v,i:start+j}))}
+function drawSwatches(){const visible=windowedColors();$('swatches').innerHTML=visible.map(({v,i})=>`<button class="swatch ${i===activeColor?'active':''}" style="--swatch:${v.swatch}" title="لون ${formatColor(v.colorNumber)} · ${v.colorName}" aria-label="اختيار اللون ${formatColor(v.colorNumber)} ${v.colorName}" aria-pressed="${i===activeColor}" data-color="${i}"></button>`).join('');document.querySelectorAll('.swatch').forEach(btn=>btn.addEventListener('click',()=>setActiveModel(activeModel.id,Number(btn.dataset.color))))}
+function updatePhoto(){
+ const request=++photoRequest;
+ const variant=currentVariant();
+ const isSide=activeView==='side';
+ const isReference=!isSide && !activeModel.variants.length;
+ const path=isSide?variant?.sideImage:isReference?activeModel.mainImage:variant?.frontImage;
+ const angle=isSide?'الصورة الجانبية':'الصورة الرئيسية';
+ const color=variant?formatColor(variant.colorNumber):'';
+ const subject=variant?`${activeModel.name}، اللون ${color} (${variant.colorName})`:activeModel.name;
+ const img=$('heroImage'),status=$('photoStatus'),hero=$('hero'),tag=$('photoTag'),caption=$('photoCaption');
+
+ function showStatus(message){
+  img.hidden=true;
+  tag.hidden=true;
+  hero.classList.remove('has-photo');
+  status.textContent=message;
+  status.hidden=false;
+  caption.textContent='';
+ }
+
+ function showImage(){
+  img.hidden=false;
+  status.hidden=true;
+  hero.classList.add('has-photo');
+  tag.hidden=!variant;
+  tag.textContent=variant?`لون ${color}`:'';
+  caption.textContent=isReference?'صورة مرجعية محفوظة لهذا التصميم.':`${angle} للون المحدد.`;
+ }
+
+ if(!path){
+  img.removeAttribute('src');
+  showStatus(`لا تتوفر ${angle} لـ${subject}.`);
+  return;
+ }
+
+ img.alt=`${angle} لـ${subject}`;
+ if(img.getAttribute('src')===path && img.complete && img.naturalWidth>0){
+  showImage();
+  return;
+ }
+ showStatus(`جارٍ تحميل ${angle} لـ${subject}…`);
+ img.src=path;
+ img.decode().then(
+  ()=>{if(request===photoRequest)showImage()},
+  ()=>{if(request===photoRequest)showStatus(`تعذّر تحميل ${angle} لـ${subject}.`)}
+ );
+}
+function render(){
+ $('productName').textContent=activeModel.name;
+ const isRosePilot=activeModel.code==='R009';
+ $('marketingPilot').hidden=!isRosePilot;
+ $('productTitleRow').hidden=isRosePilot;
+ $('marketingCopy').hidden=isRosePilot;
+ if(isRosePilot){$('pilotName').textContent=activeModel.name;$('pilotSummary').textContent=activeModel.marketingSummary||activeModel.marketingDescription||'';$('expandedDescription').textContent=activeModel.marketingDescription||'';syncPilotDescription()}
+ const v=currentVariant();
+ $('colorChip').hidden=!v;$('colorChip').textContent=v?`لون ${formatColor(v.colorNumber)}`:'';
+ $('productMeta').innerHTML=v?`<div class="meta-line"><span>كود: <b dir="ltr">${v.sku || "قيد التخصيص"}</b></span><span>مقاس: <b>${v.size}</b></span></div>`:`<div class="meta-line"><span>معرّف التصميم: <b dir="ltr">${activeModel.code||activeModel.id}</b></span><span>المقاس: <b>${activeModel.size}</b></span></div>`;
+ $('productDescription').textContent=activeModel.marketingDescription||'';
+ const colorDescription=v?catalog.colorDescriptions?.[v.colorNumber]:'';
+ $('colorCopy').hidden=!v;
+ $('colorDescriptionTitle').textContent=v?`لمسة اللون · ${v.colorName}`:'';
+ $('colorDescription').textContent=colorDescription||'';
+ if(isRosePilot){$('expandedColorTitle').textContent=v?`اللون ${formatColor(v.colorNumber)} · ${v.colorName}`:'';$('expandedColorDescription').textContent=colorDescription||''}
+ $('specs').innerHTML=(v?[activeModel.size,'مخمل · Cat 666',`لون ${formatColor(v.colorNumber)} · ${v.colorName}`]:[activeModel.size,activeModel.fabricType]).map(x=>`<span class="spec">${x}</span>`).join('');
+ $('colorControls').hidden=!activeModel.variants.length;
+ if(v){$('colorCurrent').textContent=`${v.colorName} · ${activeColor+1} من ${activeModel.variants.length}`;$('statusNote').textContent='المطابقة النهائية للون مع عينة المورد.';drawSwatches()}
+ else $('statusNote').textContent=activeModel.detail;
+ document.querySelectorAll('.thumb').forEach(b=>{const selected=b.dataset.view===activeView;b.classList.toggle('active',selected);b.classList.toggle('waiting',b.dataset.view==='side'&&!currentVariant()?.sideImage);b.setAttribute('aria-selected',String(selected))});
+ updatePhoto();drawModelCards();
+}
+function showResults(value){query=normalize(value);const out=$('searchResults');if(!query){out.classList.remove('open');out.innerHTML='';return}
+ const matches=models.filter(m=>searchMatches(m,query));
+ if(!matches.length){out.innerHTML='<div class="empty-result">لا توجد منتجات مطابقة.</div>';out.classList.add('open');return}
+ out.innerHTML=matches.map(m=>{const hit=variantForQuery(m,query);const sub=hit?`لون ${formatColor(hit.colorNumber)} · ${hit.colorName} · ${hit.sku}`:`${m.code||m.id} · ${m.size}`;return `<button class="search-result" data-model="${m.id}" data-color="${hit?m.variants.indexOf(hit):''}"><img src="${m.mainImage}" alt="" loading="lazy"><span><b>${m.name}</b><small>${sub}</small></span></button>`}).join('');out.classList.add('open');out.querySelectorAll('.search-result').forEach(btn=>btn.addEventListener('click',()=>{const ci=btn.dataset.color===''?null:Number(btn.dataset.color);setActiveModel(btn.dataset.model,ci);out.classList.remove('open');$('catalogSearch').blur()}))
+}
+function selectExactMatch(q){if(!/^\d{11}$/.test(q))return;for(const model of models){const i=model.variants.findIndex(v=>v.sku===q);if(i>=0){setActiveModel(model.id,i);return}}}
+function moveColor(delta){const count=activeModel.variants.length;if(!count)return;setActiveModel(activeModel.id,(activeColor+delta+count)%count)}
+document.querySelectorAll('.thumb').forEach(b=>b.addEventListener('click',()=>{activeView=b.dataset.view;render();revealProductImage()}));
+$('previousColor').addEventListener('click',()=>moveColor(-1));$('nextColor').addEventListener('click',()=>moveColor(1));
+$('descriptionToggle').addEventListener('click',()=>{if(expandedDescriptions.has(activeModel.id))expandedDescriptions.delete(activeModel.id);else expandedDescriptions.add(activeModel.id);syncPilotDescription()});
+$('catalogSearch').addEventListener('input',e=>{const q=normalize(e.target.value);showResults(e.target.value);if(/^\d{1,2}$/.test(q)){const n=Number(q);if(n>=1&&n<=40)setActiveModel(models[0].id,n-1)}else selectExactMatch(q)});
+$('catalogSearch').addEventListener('keydown',e=>{if(e.key==='Escape'){$('searchResults').classList.remove('open');e.target.blur()}if(e.key==='Enter'){$('searchResults').querySelector('.search-result')?.click()}});
+$('clearSearch').addEventListener('click',()=>{$('catalogSearch').value='';showResults('');$('catalogSearch').focus()});
+document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))$('searchResults').classList.remove('open')});
+$('toggleModels').addEventListener('click',()=>{const open=$('modelStrip').classList.toggle('open');$('toggleModels').setAttribute('aria-expanded',String(open));drawModelCards()});
+$('hero').addEventListener('click',()=>{if(!$('heroImage').hidden&&$('heroImage').src){$('modalImage').src=$('heroImage').src;$('imageModal').classList.add('open')}});$('hero').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('hero').click()}});
+$('closeModal').addEventListener('click',()=>$('imageModal').classList.remove('open'));$('imageModal').addEventListener('click',e=>{if(e.target===$('imageModal'))$('imageModal').classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('imageModal').classList.remove('open');if(e.key==='ArrowLeft')moveColor(1);if(e.key==='ArrowRight')moveColor(-1)});
+$('exportCsv').addEventListener('click',()=>{const rows=[['SKU','Design ID','Design','Color number','Color name','Size','Fabric','Catalog','Front image','Side image','Photo status'],...models.flatMap(m=>m.variants.map(v=>[v.sku,m.id,m.name,v.colorNumber,v.colorName,v.size,v.fabricType,v.fabricCatalog,v.frontImage||'',v.sideImage||'',v.status]))];const csv='\uFEFF'+rows.map(r=>r.map(x=>'"'+String(x).replaceAll('"','""')+'"').join(',')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='RAWAQ_R009_CAT666_90x190.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
+render();
+</script>
+</body>
+</html>
+

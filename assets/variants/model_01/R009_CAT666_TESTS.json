@@ -1,0 +1,41 @@
+{
+  "model_name": "الوردة",
+  "model_code": "R009",
+  "bed_size_cm": [
+    90,
+    190
+  ],
+  "camera_preset": "RAWAQ_90x190_MASTER_CAMERA",
+  "color_catalog": "Cat 666 Velvet",
+  "color_names_note": "Descriptive labels transcribed from the supplied chart, which says names are proposed for review; not confirmed supplier names.",
+  "test_images": [
+    {
+      "color_number": 11,
+      "descriptive_name": "سكري فاتح",
+      "file": "R009_CAT666_11_sukari_fatih_90x190.png",
+      "resolution_px": [
+        1122,
+        1402
+      ],
+      "status": "test awaiting user review"
+    },
+    {
+      "color_number": 37,
+      "descriptive_name": "أزرق ملكي",
+      "file": "R009_CAT666_37_azraq_maliki_90x190.png",
+      "resolution_px": [
+        1122,
+        1402
+      ],
+      "status": "test awaiting user review"
+    }
+  ],
+  "notes": [
+    "Only upholstery color was intended to change between samples.",
+    "The image generator produced 1122x1402 px images; the target 2048x2560 px was not met and the files were not artificially upscaled.",
+    "Digital color is a visual approximation; confirm against the physical supplier swatch before sale."
+  ],
+  "base_design_approval": "User approved R009 Al-Warda as the foundational design for Riwaq store.",
+  "catalog_color_count": 40,
+  "remaining_colors_status": "Waiting for user review of test images 11 and 37 before generation."
+}
